@@ -6,10 +6,5 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <div>
-      <p>
-        Hi i am gaurab thapa magar
-      </p>
-    </div>
   </StrictMode>,
 )
