@@ -33,13 +33,13 @@ const Navbar = () => {
               onClick={()=>setToggle(!toggle)} />
 
             <div className={`${!toggle ? 'hidden': 'flex'} p-4 px-2 black-gradient absolute top-10 right-0 mx-4 my-2 min-w-[160px] h-32 z-10 rounded-xl`}>
-              <ul className='list-none flex flex-col gap-2'>
+              <ul className='w-full list-none flex flex-col justify-center gap-2 items-center'>
                 {navLinks.map((link) => (
                   <li key={link.id} onClick={()=>{
                       setActive(link.title);
                       setToggle(!toggle);
                     }} className={`${active === link.title ? "text-white":"text-[#aaa6c3]"}
-                    font-poppins font-medium text-[16px] cursor-pointer transition-colors`}>
+                    font-poppins font-medium text-[16px] cursor-pointer transition-colors w-20 text-center`}>
                       <a href={`#${link.id}`}>{link.title}</a>
                   </li>
                 ))}
