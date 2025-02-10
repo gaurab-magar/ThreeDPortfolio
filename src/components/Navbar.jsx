@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import {styles} from '../Style'
+import {styles} from '../styles'
 import {navLinks} from '../constants'
 import { logo, menu, close } from '../assets'
 const Navbar = () => {
@@ -20,7 +20,9 @@ const Navbar = () => {
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
-            <li key={link.id} onClick={()=>setActive(link.title)} className={`${active === link.title ? "text-white":"text-[#aaa6c3]"}
+            <li key={link.id} 
+              onClick={()=>setActive(link.title)} 
+              className={`${active === link.title ? "text-white":"text-[#aaa6c3]"}
                hover:text-neutral-400 text-[18px] font-medium cursor-pointer transition-colors`}>
                 <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -39,7 +41,7 @@ const Navbar = () => {
                       setActive(link.title);
                       setToggle(!toggle);
                     }} className={`${active === link.title ? "text-white":"text-[#aaa6c3]"}
-                    font-poppins font-medium text-[16px] cursor-pointer transition-colors w-20 text-center`}>
+                      font-poppins font-medium text-[16px] cursor-pointer transition-colors w-20 text-center`}>
                       <a href={`#${link.id}`}>{link.title}</a>
                   </li>
                 ))}
